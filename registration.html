@@ -17,16 +17,25 @@
       <div class="row">
         <div class="col">
           <div id="app">
-            <reg-form></reg-form>
+            <reg-form :items="items"></reg-form>
           </div>
         </div>
       </div>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/vue@3.2.33/dist/vue.global.min.js"></script>
-    <script src="forms.js"></script>
-    <script src="registration-form.js"></script>
+    <script type="text/javascript" src="forms.js"></script>
+    <script type="text/javascript" src="registration-form.js"></script>
+
     <script>
-      const data = {};
+      const data = {
+        items: [
+          { text: 'Red', value: 'red' },
+          { text: 'Blue', value: 'blue' },
+          { text: 'Green', value: 'green' },
+        ],
+      };
+
       const vm = Vue.createApp({
         data() {
           return data;
